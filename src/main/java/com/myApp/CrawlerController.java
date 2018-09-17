@@ -12,18 +12,12 @@ public class CrawlerController {
 
     public static long count;
 
-
     //private Jobs job;
-
-
-
     //@Autowired
-
 
     @RequestMapping(value = "/jobs", method = RequestMethod.POST)
     @ResponseBody
     public JobDtoResponse jobsScheduler(@RequestBody JobsDtoRequest jobsDtoRequest){
-
 
 
         JobsService jobsService = new JobsService();
@@ -33,9 +27,7 @@ public class CrawlerController {
         jobsDtoRequest.getUrls().stream().forEach(e -> System.out.println(e));
         System.out.println(jobsDtoRequest.getKey());
 
-
         //System.out.println(job.getId());
-
 
         try {
             System.out.println(job.getUrls());
@@ -45,10 +37,8 @@ public class CrawlerController {
             npe.printStackTrace();
         }
 
-
         JobDtoResponse jobDtoResponse = new JobDtoResponse(job);
         System.out.println(jobDtoResponse.getId());
         return jobDtoResponse;
     }
-
 }
