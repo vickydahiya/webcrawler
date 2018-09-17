@@ -7,7 +7,6 @@ public class JobDtoResponse {
 
 
     public JobDtoResponse() {
-
     }
 
     private long id;
