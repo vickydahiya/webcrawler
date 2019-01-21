@@ -1,8 +1,12 @@
 package com.myApp.Repo;
 
-import com.myApp.Service.Jobs;
-import org.springframework.data.repository.CrudRepository;
+import java.util.List;
 
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface JobsRepository extends CrudRepository<Jobs,Long> {
+	List<Jobs> findByParentId(Long parentId);
 
 }
